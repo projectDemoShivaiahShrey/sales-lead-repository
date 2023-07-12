@@ -15,4 +15,15 @@ public class DestinationController {
         this.destinationService = destinationService;
     }
 
+    @GetMapping("/destinations")
+    public List<DestinationModel> getAllDestinations(){
+        return destinationService.getAllDestinations();
+    }
+
+
+    @GetMapping("/destinations/{destinationID}")
+    public Optional<DestinationModel> getDestinationById(@PathVariable Long locationID){
+        return destinationService.getDestinationById(locationID);
+    }
+
 }

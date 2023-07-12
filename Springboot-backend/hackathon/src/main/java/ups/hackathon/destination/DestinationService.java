@@ -12,4 +12,13 @@ public class DestinationService {
     public DestinationService(DestinationRepository destinationRepository) {
         this.destinationRepository = destinationRepository;
     }
+
+    public List<DestinationModel> getAllDesinations(){
+        return destinationRepository.findAll();
+    }
+
+    public Optional<DesinationModel> getDestinationById(Long id){
+
+        return destinationRepository.findById(id);
+    }
 }
