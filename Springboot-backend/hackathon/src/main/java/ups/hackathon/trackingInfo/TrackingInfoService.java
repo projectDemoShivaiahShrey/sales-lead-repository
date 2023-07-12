@@ -23,4 +23,6 @@ public class TrackingInfoService {
     public Optional<TrackingInfoModel> getTrackingInfoByTrackingNum(Long trackingNum){
         return trackingInfoRepository.findById(trackingNum);
     }
+
+
 }
