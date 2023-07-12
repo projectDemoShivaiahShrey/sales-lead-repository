@@ -2,9 +2,9 @@ package ups.hackathon.trackingInfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ups.hackathon.carrier.CarrierModel;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TrackingInfoService {
@@ -18,5 +18,9 @@ public class TrackingInfoService {
 
     public List<TrackingInfoModel> getAllTrackingInfo(){
         return trackingInfoRepository.findAll();
+    }
+
+    public Optional<TrackingInfoModel> getTrackingInfoByTrackingNum(Long trackingNum){
+        return trackingInfoRepository.findById(trackingNum);
     }
 }
