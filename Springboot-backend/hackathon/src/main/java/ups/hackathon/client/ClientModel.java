@@ -21,7 +21,7 @@ public class ClientModel {
     }
 
     @JsonIgnore
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "trackingInfo")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "client")
     private List<TrackingInfoModel> trackingInfoModels = new ArrayList<>();
 
 
