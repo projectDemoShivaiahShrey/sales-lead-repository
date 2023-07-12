@@ -1,7 +1,11 @@
 package ups.hackathon.destination;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import ups.hackathon.trackingInfo.TrackingInfoModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "destination")
