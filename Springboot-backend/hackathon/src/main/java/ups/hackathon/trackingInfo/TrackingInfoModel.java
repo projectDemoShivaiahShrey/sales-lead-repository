@@ -1,4 +1,4 @@
-package ups.hackathontest.trackingInfo;
+package ups.hackathon.trackingInfo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

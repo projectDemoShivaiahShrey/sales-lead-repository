@@ -1,4 +1,4 @@
-package ups.hackathontest.client;
+package ups.hackathon.client;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

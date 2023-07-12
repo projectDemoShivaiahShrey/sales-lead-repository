@@ -1,4 +1,4 @@
-package ups.hackathontest.carrier;
+package ups.hackathon.carrier;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

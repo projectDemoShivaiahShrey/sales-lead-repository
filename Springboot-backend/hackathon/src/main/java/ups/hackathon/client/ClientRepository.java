@@ -1,4 +1,4 @@
-package ups.hackathontest.client;
+package ups.hackathon.client;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

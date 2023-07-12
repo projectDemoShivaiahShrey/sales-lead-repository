@@ -1,4 +1,4 @@
-package ups.hackathontest.carrier;
+package ups.hackathon.carrier;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

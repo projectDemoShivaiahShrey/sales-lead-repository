@@ -1,4 +1,4 @@
-package ups.hackathontest.client;
+package ups.hackathon.client;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

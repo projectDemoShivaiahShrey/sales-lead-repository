@@ -1,4 +1,4 @@
-package ups.hackathontest.destination;
+package ups.hackathon.destination;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
