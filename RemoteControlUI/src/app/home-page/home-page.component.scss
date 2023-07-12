@@ -1,3 +1,6 @@
+.customerLink {
+    text-decoration: none;
+}
 .headingBox {
     display: flex;
     flex-wrap: wrap;
@@ -49,13 +52,6 @@ p {
     background: transparent;
     color: #0662bb;
 }
-.card-deck {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    min-height: 1px;
-    flex-flow: row;
-}
 .card-body-content {
     padding: 2rem;
 }
@@ -83,25 +79,13 @@ p {
     top: calc(100% + 12px);
     left: 0;
 }
-/* .card-deck {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    min-height: 1px;
-    flex-flow: column;
-} */
+
 @media only screen and (max-width: 1023px) and (min-width: 769px) {
     #wrapper {
       margin-left: 0rem !important;
       margin-top: 12rem !important;
   }
-  .card-deck {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    min-height: 1px;
-    flex-flow: column;
-}
+  
 }
 @media (max-width: 768px) { 
     .headingBox {
@@ -127,6 +111,7 @@ p {
         margin-bottom: 5rem;
     }
     .card-deck {
+        text-decoration: none;
         display: flex;
         justify-content: center;
         position: relative;
