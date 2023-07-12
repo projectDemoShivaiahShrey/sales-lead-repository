@@ -2,6 +2,7 @@ package ups.hackathon.trackingInfo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import ups.hackathon.carrier.CarrierModel;
 import ups.hackathon.client.ClientModel;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "trackingInfo")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class TrackingInfoModel {
 
     // non-parameterized constructor for hibernate
@@ -25,28 +27,22 @@ public class TrackingInfoModel {
         this.packageDelivered = packageDelivered;
     }
 
-    //M:1 with User
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_carrier")
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "fk_carrier", referencedColumnName="id")
     private CarrierModel carrier;
 
-    //M:1 with User
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_client")
-    @JsonIgnore
+
+    @ManyToOne()
+    @JoinColumn(name = "fk_client", referencedColumnName="id")
     private ClientModel client;
 
-    //M:1 with User
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_origin")
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "fk_origin", referencedColumnName="id")
     private OriginModel origin;
 
-    //M:1 with User
-    @ManyToOne(fetch = FetchType.LAZY)
+
+    @ManyToOne()
     @JoinColumn(name = "fk_destination")
-    @JsonIgnore
     private DestinationModel destination;
 
 

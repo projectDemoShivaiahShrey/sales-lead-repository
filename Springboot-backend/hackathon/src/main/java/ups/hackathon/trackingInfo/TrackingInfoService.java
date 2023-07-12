@@ -17,7 +17,8 @@ public class TrackingInfoService {
     }
 
     public List<TrackingInfoModel> getAllTrackingInfo(){
-        return trackingInfoRepository.findAll();
+        List<TrackingInfoModel> lst = trackingInfoRepository.findAll();
+        return lst;
     }
 
     public Optional<TrackingInfoModel> getTrackingInfoByTrackingNum(Long trackingNum){
