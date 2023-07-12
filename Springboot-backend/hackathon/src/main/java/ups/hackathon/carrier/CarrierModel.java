@@ -17,6 +17,7 @@ public class CarrierModel {
     }
 
     public CarrierModel(String carrierName){
+
         this.carrierName = carrierName;
     }
 

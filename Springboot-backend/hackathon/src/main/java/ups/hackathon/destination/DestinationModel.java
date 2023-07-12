@@ -11,4 +11,80 @@ public class DestinationModel {
     public DestinationModel(){
 
     }
+
+    public DestinationModel(String street, String city, String state, String ZIP){
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.ZIP = ZIP;
+    }
+
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "trackingInfo")
+    private List<TrackingInfoModel> trackingInfoModels = new ArrayList<>();
+
+    @Id //pk
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long locationID;
+
+    @Column(name = "street")
+    private String street;
+
+    @Column(name = "city")
+    private String city;
+
+    @Column(name = "state")
+    private String state;
+
+    @Column(name = "ZIP")
+    private String ZIP;
+
+    public List<TrackingInfoModel> getTrackingInfoModels() {
+        return trackingInfoModels;
+    }
+
+    public void setTrackingInfoModels(List<TrackingInfoModel> trackingInfoModels) {
+        this.trackingInfoModels = trackingInfoModels;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getZIP() {
+        return ZIP;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setZIP(String ZIP) {
+        this.ZIP = ZIP;
+    }
+
+    public Long getLocationID() {
+        return locationID;
+    }
+
+    public void setLocationID(Long locationID) {
+        this.locationID = locationID;
+    }
 }
