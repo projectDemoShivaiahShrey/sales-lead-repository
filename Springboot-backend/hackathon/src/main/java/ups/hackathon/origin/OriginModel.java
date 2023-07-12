@@ -20,7 +20,7 @@ public class OriginModel {
     }
 
     @JsonIgnore
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "trackingInfo")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "origin")
     private List<TrackingInfoModel> trackingInfoModels = new ArrayList<>();
 
     @Id //pk
