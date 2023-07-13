@@ -47,9 +47,8 @@ public class TrackingInfoModel {
 
 
     @Id //pk
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tracking_num")
-    private Long trackingNumber;
+    private String trackingNumber;
 
 
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
@@ -77,7 +76,7 @@ public class TrackingInfoModel {
         return destination;
     }
 
-    public Long getTrackingNumber() {
+    public String getTrackingNumber() {
         return trackingNumber;
     }
 
@@ -106,7 +105,7 @@ public class TrackingInfoModel {
         this.destination = destination;
     }
 
-    public void setTrackingNumber(Long trackingNumber) {
+    public void setTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
     }
 

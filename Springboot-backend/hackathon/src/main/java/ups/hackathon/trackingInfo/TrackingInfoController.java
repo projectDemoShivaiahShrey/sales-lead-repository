@@ -28,7 +28,7 @@ public class TrackingInfoController {
 
 
     @GetMapping("/trackingInfo/{trackingNum}")
-    public Optional<TrackingInfoModel> getTrackingInfoByTrackingNum(@PathVariable Long trackingNum){
+    public Optional<TrackingInfoModel> getTrackingInfoByTrackingNum(@PathVariable String trackingNum){
         return trackingInfoService.getTrackingInfoByTrackingNum(trackingNum);
     }
 
