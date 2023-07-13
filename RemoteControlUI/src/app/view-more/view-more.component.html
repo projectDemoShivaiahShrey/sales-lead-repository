@@ -1,20 +1,43 @@
-<h2 id="textcenter">Client Name</h2>
-<div>
+<h2 id="textcenter">{{ client }}</h2>
+<div class="table-box">
   <table class="tablecenter">
-    <tr>
+    <tr class="rowheader">
       <th>Shipment</th>
+      <th>Tracking Number</th>
+      <th>Carrier</th>
       <th>Origin</th>
       <th>Destination</th>
-      <th>Process of Delivery</th>
+      <th>Time Processed</th>
+      <th>Time Delivered</th>
     </tr>
-    <!-- <div *ngFor="let row of carrierName; let i = index">
-      <tr>
-        {{
-          i
-        }}
-      </tr>
-      <tr></tr>
-      <tr></tr>
-    </div> -->
+    <tr class="row" *ngFor="let row of carrierName; let i = index">
+      <td>
+        {{ i + 1 }}
+      </td>
+      <td>
+        {{ trackingNum[i] }}
+      </td>
+      <td>
+        {{ carrierName[i] }}
+      </td>
+      <td>
+        <span>{{ origin[i].street }}, </span>
+        <span>{{ origin[i].city }}, </span>
+        <span>{{ origin[i].state }} </span>
+        <span>{{ origin[i].zip }}</span>
+      </td>
+      <td>
+        <span>{{ destination[i].street }}, </span>
+        <span>{{ destination[i].city }}, </span>
+        <span>{{ destination[i].state }} </span>
+        <span>{{ destination[i].zip }}</span>
+      </td>
+      <td>
+        {{ packageProcessed[i] }}
+      </td>
+      <td>
+        {{ packageDelivered[i] }}
+      </td>
+    </tr>
   </table>
 </div>

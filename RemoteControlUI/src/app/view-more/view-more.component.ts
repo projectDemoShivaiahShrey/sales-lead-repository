@@ -14,10 +14,12 @@ import { Destination } from '../Models/Destination';
 })
 export class ViewMoreComponent {
   carrierName: string[] = [];
-  origin: string[] = [];
-  destination: string[] = [];
+  origin: any[] = [];
+  destination: any[] = [];
   packageProcessed: string[] = [];
   packageDelivered: string[] = [];
+  trackingNum: number[] = [];
+  client: String = '';
 
   clientId: number = 0;
   trackingInfo: TrackingInfo[] = [];
@@ -37,11 +39,13 @@ export class ViewMoreComponent {
           element.carrier.carrierName != 'UPS' &&
           element.client.clientId == this.clientId
         ) {
+          this.trackingNum.push(element.trackingNumber);
           this.carrierName.push(element.carrier.carrierName);
-          this.origin.push(element.origin.city);
-          this.destination.push(element.destination.city);
+          this.origin.push(element.origin);
+          this.destination.push(element.destination);
           this.packageProcessed.push(element.packageProcessed);
           this.packageDelivered.push(element.packageDelivered);
+          this.client = element.client.clientName;
         }
       });
       console.log(this.carrierName);
