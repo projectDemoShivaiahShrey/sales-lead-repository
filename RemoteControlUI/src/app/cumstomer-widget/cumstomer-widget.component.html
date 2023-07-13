@@ -1,49 +1,18 @@
-<app-header></app-header>
 <h1 style = "font-family: Tahoma, Helvetica, arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 10vh; "> Customers</h1>
-<body class = "container">
+<body class = "container" >
+    <div *ngFor = "let client of clients">
     <div class = "thumbnail-box">
         <div class = "thumbnail-picture"> 
             <img class = "logo" src = "assets/images/UPS_logo.svg">
         </div>
         <div class = "api-name">
-            Macy's
+            {{client.ClientName}}
         </div>
-    
         <div class = "description-box">
-            Macy's is using DHL
+            {{client.ClientName}} is using DHL
         </div>
-        <button class = "like-button" > Delete</button>
-        <button class = "view-more">View More</button>
+        <button class = "like-button" >Delete</button>
+        <a  class = "view-more">View More</a>
     </div>
-
-    <div class = "thumbnail-box">
-        <div class = "thumbnail-picture"> 
-            <img class = "logo" src = "assets/images/UPS_logo.svg">
-        </div>
-        <div class = "api-name">
-            Macy's
-        </div>
-    
-        <div class = "description-box">
-            Macy's is using DHL
-        </div>
-        <button class = "like-button" > Delete</button>
-        <button class = "view-more">View More</button>
     </div>
-
-    <div class = "thumbnail-box">
-        <div class = "thumbnail-picture"> 
-            <img class = "logo" src = "assets/images/UPS_logo.svg">
-        </div>
-        <div class = "api-name">
-            Macy's
-        </div>
-    
-        <div class = "description-box">
-            Macy's is using DHL
-        </div>
-        <button class = "like-button" > Delete</button>
-        <button class = "view-more">View More</button>
-    </div>
-
 </body>
