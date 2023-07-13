@@ -4,12 +4,12 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Client } from 'src/app/Models/Client';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CustomerWidgetService {
   constructor(private http: HttpClient) {}
-  apiUrl = "http://localhost:8080/";
-  public getAllClients() : Observable<Client[]> {
-    return this.http.get<Client[]>(this.apiUrl + "clients")
+  apiUrl = 'http://localhost:8080/api/';
+  public getAllClients(): Observable<Client[]> {
+    return this.http.get<Client[]>(this.apiUrl + 'clients');
   }
 }

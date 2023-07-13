@@ -1,18 +1,26 @@
-<h1 style = "font-family: Tahoma, Helvetica, arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 10vh; "> Customers</h1>
-<body class = "container" >
-    <div *ngFor = "let client of clients">
-    <div class = "thumbnail-box">
-        <div class = "thumbnail-picture"> 
-            <img class = "logo" src = "assets/images/UPS_logo.svg">
-        </div>
-        <div class = "api-name">
-            {{client.ClientName}}
-        </div>
-        <div class = "description-box">
-            {{client.ClientName}} is using DHL
-        </div>
-        <button class = "like-button" >Delete</button>
-        <a class = "view-more">View More</a>
+<h1
+  style="
+    font-family: Tahoma, Helvetica, arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  "
+>
+  Customers
+</h1>
+<body class="container">
+  <div *ngFor="let client of clients">
+    <div class="thumbnail-box">
+      <div class="thumbnail-picture">
+        <img class="logo" src="assets/images/UPS_logo.svg" />
+      </div>
+      <div class="api-name">
+        {{ client.clientName }}
+      </div>
+      <div class="description-box"></div>
+      <!-- <button class="like-button"></button> -->
+      <a class="view-more">View More</a>
     </div>
-    </div>
+  </div>
 </body>

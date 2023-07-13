@@ -1,4 +1,4 @@
 export class Client {
-    ClientID : number = -1;
-    ClientName : String = "";
+  clientID: number = -1;
+  clientName: String = '';
 }
