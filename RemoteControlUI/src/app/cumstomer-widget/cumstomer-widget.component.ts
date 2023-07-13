@@ -13,7 +13,6 @@ export class CumstomerWidgetComponent {
   ngOnInit(): void {
     this.customerWidgetService.getAllClients().subscribe((result: Client[]) => {
       this.clients = result;
-       console.log(result.length);
     });
     /*this.clients = [ 
       {clientId : 1, clientName : "Macy's"},

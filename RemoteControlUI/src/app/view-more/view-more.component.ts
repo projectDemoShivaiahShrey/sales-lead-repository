@@ -10,31 +10,45 @@ import { Destination } from '../Models/Destination';
 @Component({
   selector: 'app-view-more',
   templateUrl: './view-more.component.html',
-  styleUrls: ['./view-more.component.scss']
+  styleUrls: ['./view-more.component.scss'],
 })
 export class ViewMoreComponent {
-    carrierName : string[] = [];
-    origin : string[] = [];
-    destination : string[] = [];
-    packageProcessed : string[] = [];
-    packageDelivered : string[] = [];
+  carrierName: string[] = [];
+  origin: string[] = [];
+  destination: string[] = [];
+  packageProcessed: string[] = [];
+  packageDelivered: string[] = [];
 
-    clientId : number = 0;
-    trackingInfo : TrackingInfo[] = [];
+  clientId: number = 0;
+  trackingInfo: TrackingInfo[] = [];
 
-    constructor(private route : ActivatedRoute, private service : CustomerWidgetService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private service: CustomerWidgetService
+  ) {}
 
-    ngOnInit() {
-      this.clientId = +this.route.snapshot.paramMap.get('clientID')!;
-      this.service.getAllTracking().subscribe((result) => this.trackingInfo = result);
-      this.trackingInfo.forEach(element => {
-        if (element.carrier.carrierName != "UPS") {
-          this.carrierName.concat(element.carrier.carrierName);
-          this.origin.concat(element.origin.city);
-          this.destination.concat(element.destination.city);
-          this.packageProcessed.concat(element.packageProcessed);
-          this.packageDelivered.concat(element.packageDelivered);
+  ngOnInit() {
+    this.carrierName = [];
+    this.clientId = +this.route.snapshot.paramMap.get('clientID')!;
+    this.service.getAllTracking().subscribe((result) => {
+      this.trackingInfo = result;
+      this.trackingInfo.forEach((element) => {
+        if (
+          element.carrier.carrierName != 'UPS' &&
+          element.client.clientId == this.clientId
+        ) {
+          this.carrierName.push(element.carrier.carrierName);
+          this.origin.push(element.origin.city);
+          this.destination.push(element.destination.city);
+          this.packageProcessed.push(element.packageProcessed);
+          this.packageDelivered.push(element.packageDelivered);
         }
       });
-    }
+      console.log(this.carrierName);
+      console.log(this.origin);
+      console.log(this.destination);
+      console.log(this.packageProcessed);
+      console.log(this.packageDelivered);
+    });
+  }
 }
