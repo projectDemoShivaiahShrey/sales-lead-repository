@@ -11,20 +11,17 @@ export class CumstomerWidgetComponent {
   constructor(private customerWidgetService: CustomerWidgetService) {}
   clients: Client[] = [];
   ngOnInit(): void {
-    this.customerWidgetService.getAllClients().subscribe((result: Client[]) => {
-      this.clients = result;
-      console.log(this.clients[0].clientName);
+    //this.customerWidgetService.getAllClients().subscribe((result: Client[]) => {
+      //this.clients = result;
       // console.log(result.length);
-    });
-    /*this.clients = [ 
-      {ClientID : 1, ClientName : "Macy's"},
-      {ClientID : 2, ClientName: "Walmart"},
-      {ClientID : 3, ClientName: "Michael's"},
-      {ClientID : 4, ClientName: "Target"},
-      {ClientID : 5, ClientName: "ToysrUs"},
-      {ClientID : 6, ClientName: "Apple"}
+    //});
+    this.clients = [ 
+      {clientID : 1, clientName : "Macy's"},
+      {clientID : 2, clientName: "Walmart"},
+      {clientID : 3, clientName: "Michael's"},
+      {clientID : 4, clientName: "Target"},
+      {clientID : 5, clientName: "ToysrUs"},
+      {clientID : 6, clientName: "Apple"}
     ]
-    */
-    console.log(this.clients.length);
   }
 }
