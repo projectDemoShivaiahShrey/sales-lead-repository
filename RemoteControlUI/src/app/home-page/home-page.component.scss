@@ -25,14 +25,14 @@ svg {
     overflow: hidden;
     vertical-align: middle;
 }
-#wrapper { 
-    margin-left: 0rem; 
-    margin-top: 3rem; 
+#wrapper {
+    margin-left: 0rem;
+    margin-top: 3rem;
 }
 #customer-positioning {
     position: relative;
     left: 35%;
-    
+
 }
 .ups-component {
     background: linear-gradient(318.8deg, #DFDBD7 -11.42%, #F2F1EF 58.01%);
@@ -90,9 +90,9 @@ p {
       margin-left: 0rem !important;
       margin-top: 12rem !important;
   }
-  
+
 }
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .headingBox {
         display: flex;
         flex-direction: column;
@@ -143,7 +143,7 @@ p {
         color: black;
         margin-top: -30px;
       }
-      
+
       h2:after {
           content: "";
           width: 5rem;
@@ -172,6 +172,6 @@ p {
 }
 // Changes font of entire page
 * {
-    font-family: Verdana /* Replace with your custom font */, sans-serif !important; 
+    font-family: Verdana /* Replace with your custom font */, sans-serif !important;
     /* Add !important to overwrite all elements */
   }
