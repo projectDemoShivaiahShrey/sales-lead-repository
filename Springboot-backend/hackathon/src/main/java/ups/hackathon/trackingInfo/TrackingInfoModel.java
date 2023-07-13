@@ -1,7 +1,6 @@
 package ups.hackathon.trackingInfo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import ups.hackathon.carrier.CarrierModel;
