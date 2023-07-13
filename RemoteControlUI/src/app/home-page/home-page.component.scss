@@ -25,9 +25,14 @@ svg {
     overflow: hidden;
     vertical-align: middle;
 }
-#wrapper {
-    margin-left: 11rem;
-    margin-top: 3rem;
+#wrapper { 
+    margin-left: 0rem; 
+    margin-top: 3rem; 
+}
+#customer-positioning {
+    position: relative;
+    left: 35%;
+    
 }
 .ups-component {
     background: linear-gradient(318.8deg, #DFDBD7 -11.42%, #F2F1EF 58.01%);

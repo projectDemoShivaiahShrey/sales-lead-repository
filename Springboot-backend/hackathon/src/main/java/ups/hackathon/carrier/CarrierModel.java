@@ -21,8 +21,8 @@ public class CarrierModel {
         this.carrierName = carrierName;
     }
 
-    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "carrier")
+    @JsonIgnore
     private List<TrackingInfoModel> trackingInfoModels = new ArrayList<>();
 
 

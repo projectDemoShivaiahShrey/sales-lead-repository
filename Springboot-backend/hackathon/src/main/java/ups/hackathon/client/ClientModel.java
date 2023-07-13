@@ -20,8 +20,8 @@ public class ClientModel {
         this.clientName = clientName;
     }
 
-    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "client")
+    @JsonIgnore
     private List<TrackingInfoModel> trackingInfoModels = new ArrayList<>();
 
 

@@ -23,8 +23,8 @@ public class OriginModel {
         this.ZIP = ZIP;
     }
 
-    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "origin")
+    @JsonIgnore
     private List<TrackingInfoModel> trackingInfoModels = new ArrayList<>();
 
     @Id //pk
